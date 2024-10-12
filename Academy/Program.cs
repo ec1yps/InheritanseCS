@@ -13,8 +13,6 @@ namespace Academy
 {
 	internal class Program
 	{
-		static readonly string delimiter = "\n---------------------------------------------------\n";
-
 		static void Main(string[] args)
 		{
 
@@ -43,34 +41,15 @@ namespace Academy
 				new Graduate("Mercer", "Alex", 45, "Biology", "AA_123", 90, 90, "Biomutation"),
 				new Teacher("White", "Walter", 50, "Chemistry", 25),
 			};
-			Print(group);
+			Streamer.Print(group);
 
 			string filename = "Group.txt";
-			Save(group, filename);
+			Streamer.Save(group, filename);
 			//Load(filename);
 #endif
 		}
 
-		static void Print(Human[] group)
-		{
-            Console.WriteLine(delimiter);
-            foreach (Human i in group)
-			{
-				Console.WriteLine(i.ToString());
-			}
-			Console.WriteLine($"Количество человек в группе: {group.Length}");
-            Console.WriteLine(delimiter);
-		}
-		static void Save(Human[] group, string filename)
-		{
-			StreamWriter sw = new StreamWriter(filename);
-			foreach (Human i in group)
-			{
-				sw.WriteLine(i.ToString());
-			}
-			sw.Close();
-			Process.Start("notepad", filename);
-		}
+		
 		static void Load(string filename)
 		{
 			StreamReader sr = new StreamReader(filename);
