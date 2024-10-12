@@ -9,6 +9,10 @@ namespace Academy
 {
 	internal class Student : Human
 	{
+		static readonly int SPECIALITY_WIDTH = 24;
+		static readonly int GROUP_WIDTH = 8;
+		static readonly int RATING_WIDTH = 8;
+		static readonly int ATTANDANCE_WIDTH = 8;
 		public string Speciality { get; set; }
 		public string Group { get; set; }
 		public double Rating { get; set; }
@@ -38,7 +42,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + $" {Speciality} {Group} {Rating} {Attandance}";
+			return base.ToString() + $" {Speciality.PadRight(SPECIALITY_WIDTH)} {Group.PadRight(GROUP_WIDTH)} {Rating.ToString().PadRight(RATING_WIDTH)} {Attandance.ToString().PadRight(ATTANDANCE_WIDTH)}";
 		}
 	}
 }

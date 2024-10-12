@@ -47,7 +47,7 @@ namespace Academy
 
 			string filename = "Group.txt";
 			Save(group, filename);
-			Load(filename);
+			//Load(filename);
 #endif
 		}
 
@@ -69,7 +69,7 @@ namespace Academy
 				sw.WriteLine(i.ToString());
 			}
 			sw.Close();
-			Process.Start(filename);
+			Process.Start("notepad", filename);
 		}
 		static void Load(string filename)
 		{
