@@ -24,12 +24,12 @@ namespace Academy
 		internal static void Save(Human[] group, string filename)
 		{
 			StreamWriter sw = new StreamWriter(filename);
-			foreach (Human i in group)
+            foreach (Human i in group)
 			{
 				sw.WriteLine(i.ToFileString());
 			}
 			sw.Close();
-			Process.Start("notepad", filename);
+			Process.Start("excel", filename);
 		}
 	}
 }

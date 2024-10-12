@@ -39,7 +39,7 @@ namespace Academy
 		}
 		public virtual string ToFileString()
 		{
-			return this.GetType().ToString().Split('.').Last() + $",{LastName},{FirstName},{Age}";
+			return this.GetType().ToString().Split('.').Last() + $";{LastName};{FirstName};{Age}";
 		}
 	}
 }

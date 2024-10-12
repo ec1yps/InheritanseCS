@@ -43,7 +43,7 @@ namespace Academy
 			};
 			Streamer.Print(group);
 
-			string filename = "Group.txt";
+			string filename = "Group.csv";
 			Streamer.Save(group, filename);
 			//Load(filename);
 #endif

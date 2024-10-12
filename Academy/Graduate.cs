@@ -36,7 +36,7 @@ namespace Academy
 		}
 		public override string ToFileString()
 		{
-			return base.ToFileString() + $",{Theme}";
+			return base.ToFileString() + $";{Theme}";
 		}
 	}
 }

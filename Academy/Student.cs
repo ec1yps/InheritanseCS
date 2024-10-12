@@ -46,7 +46,7 @@ namespace Academy
 		}
 		public override string ToFileString()
 		{
-			return base.ToFileString() + $",{Speciality},{Group},{Rating},{Attandance}";
+			return base.ToFileString() + $";{Speciality};{Group};{Rating};{Attandance}";
 		}
 	}
 }
