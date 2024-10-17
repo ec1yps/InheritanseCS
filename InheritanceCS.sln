@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Academy\Academy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Files", "Files\Files.csproj", "{0757C0F6-2809-470F-8731-F2D698784802}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractBaseClass", "AbstractBaseClass\AbstractBaseClass.csproj", "{3B6ACB6B-37DA-4C45-BEE4-75651FBEF0D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractGeometry", "AbstractGeometry\AbstractGeometry.csproj", "{05766A13-B95A-47D3-AFB0-1801484B5957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0757C0F6-2809-470F-8731-F2D698784802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0757C0F6-2809-470F-8731-F2D698784802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0757C0F6-2809-470F-8731-F2D698784802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6ACB6B-37DA-4C45-BEE4-75651FBEF0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6ACB6B-37DA-4C45-BEE4-75651FBEF0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6ACB6B-37DA-4C45-BEE4-75651FBEF0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6ACB6B-37DA-4C45-BEE4-75651FBEF0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05766A13-B95A-47D3-AFB0-1801484B5957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05766A13-B95A-47D3-AFB0-1801484B5957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05766A13-B95A-47D3-AFB0-1801484B5957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05766A13-B95A-47D3-AFB0-1801484B5957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
