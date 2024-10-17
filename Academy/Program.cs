@@ -1,5 +1,5 @@
 ﻿//#define INHERITANCE_CHECK
-#define HUMAN_ARRAY
+//#define SAVE_CHECK
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +33,7 @@ namespace Academy
 			graduate.Print();
 			Console.WriteLine(graduate);
 #endif
-#if HUMAN_ARRAY
+#if SAVE_CHECK
 			Human[] group =
 			{
 				new Student("Pinkman", "Jessie", 22, "Chemistry", "WW_220", 95, 96),
@@ -43,22 +43,11 @@ namespace Academy
 			};
 			Streamer.Print(group);
 
-			string filename = "Group.csv";
 			Streamer.Save(group, filename);
-			//Load(filename);
 #endif
-		}
-
-		
-		static void Load(string filename)
-		{
-			StreamReader sr = new StreamReader(filename);
-			while (!sr.EndOfStream)
-			{
-				string buffer = sr.ReadLine();
-                Console.WriteLine(buffer);
-            }
-			sr.Close();
+			string filename = "Group.csv";
+			Human[] group = Streamer.Load(filename);
+			Streamer.Print(group);
 		}
 	}
 }

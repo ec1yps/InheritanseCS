@@ -38,5 +38,11 @@ namespace Academy
 		{
 			return base.ToFileString() + $";{Theme}";
 		}
+		public override Human Init(string[] values)
+		{
+			base.Init(values);
+			Theme = values[8];
+			return this;
+		}
 	}
 }
