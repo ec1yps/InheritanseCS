@@ -22,16 +22,16 @@ namespace AbstractGeometry
 				);
 			PaintEventArgs e = new PaintEventArgs(graphics, window_rect);
 
-            Rectangle rectangle = new Rectangle(100, 50, 100, 300, 3, System.Drawing.Color.Red);
+            Rectangle rectangle = new Rectangle(100, 50, 600, 50, 3, System.Drawing.Color.Red);
 			rectangle.Info(e);
 
-			Squre square = new Squre(100, 100, 400, 3, System.Drawing.Color.Green);
+			Squre square = new Squre(100, 600, 200, 3, System.Drawing.Color.Green);
 			square.Info(e);
 
-			Circle circle = new Circle(50, 250, 300, 3, System.Drawing.Color.Yellow);
+			Circle circle = new Circle(50, 750, 50, 3, System.Drawing.Color.Yellow);
 			circle.Info(e);
 
-			Triangle triangle = new Triangle(70, 80, 100, 250, 500, 3, System.Drawing.Color.Red);
+			Triangle triangle = new Triangle(70, 80, 100, 750, 300, 3, System.Drawing.Color.Blue);
 			triangle.Info(e);
 		}
 		[DllImport("kernel32.dll")]

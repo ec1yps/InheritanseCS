@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace AbstractGeometry
 {
-	internal class Rectangle : Shape
+	internal class Rectangle : Shape, IHaveDiagonal
 	{
 		double width;
 		double height;
@@ -34,13 +34,28 @@ namespace AbstractGeometry
 			Height = height;
 		}
 
+		public double GetDiagonal()
+		{
+			return Math.Sqrt(Math.Pow(Width, 2) + Math.Pow(Height, 2));
+		}
 		public override double GetArea() => Width * Height;
 		public override double GetPerimeter() => 2 * (Width + Height);
 		public override void Draw(PaintEventArgs e)
 		{
 			Pen pen = new Pen(Color, LineWidth);
 			e.Graphics.DrawRectangle(pen, StartX, StartY, (int)Width, (int)Height);
-
+			DrawDiagonal(e);
         }
+		public void DrawDiagonal(PaintEventArgs e)
+		{
+			e.Graphics.DrawLine(new Pen(Color, LineWidth), StartX, StartY, (float)(StartX + Width), (float)(StartY + Height));
+		}
+		public override void Info(PaintEventArgs e)
+		{
+            Console.WriteLine(this.GetType());
+			Console.WriteLine($"Ширина прямоугольника: {Width}");
+			Console.WriteLine($"Высота прямоугольника: {Height}");
+            base.Info(e);
+		}
 	}
 }

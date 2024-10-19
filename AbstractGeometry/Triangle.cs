@@ -58,6 +58,12 @@ namespace AbstractGeometry
 		{
 			return SideA > SideB && SideA > SideC ? SideA : SideB > SideA && SideB > SideC ? SideB : SideC;
 		}
+		public double GetMidSide()
+		{
+			return SideA > SideB && SideA < SideC || SideA < SideB && SideA > SideC ? SideA 
+				: SideB > SideA && SideB < SideC || SideB < SideA && SideB > SideC ? SideB 
+				: SideC;
+		}
 		public double GetMinSide()
 		{
 			return SideA < SideB && SideA < SideC ? SideA : SideB < SideA && SideB < SideC ? SideB : SideC;
@@ -75,6 +81,14 @@ namespace AbstractGeometry
 				new PointF(StartX + (float)GetMaxSide(), StartY)
 			};
 			e.Graphics.DrawPolygon(pen, points);
+		}
+		public override void Info(PaintEventArgs e)
+		{
+            Console.WriteLine(this.GetType());
+            Console.WriteLine($"Большая сторона: {GetMaxSide()}");
+            Console.WriteLine($"Средняя сторона: {GetMidSide()}");
+            Console.WriteLine($"Меньшая сторона: {GetMinSide()}");
+            base.Info(e);
 		}
 	}
 }
