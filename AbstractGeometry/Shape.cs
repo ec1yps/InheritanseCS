@@ -65,6 +65,7 @@ namespace AbstractGeometry
 		public abstract void Draw(PaintEventArgs e);
 		public virtual void Info(PaintEventArgs e)
 		{
+			Console.WriteLine($"{ToString().Split('.').Last<string>()}:");
 			Console.WriteLine($"Площадь фигуры: {GetArea()}");
 			Console.WriteLine($"Периметр фигуры: {GetPerimeter()}");
 			Draw(e);
