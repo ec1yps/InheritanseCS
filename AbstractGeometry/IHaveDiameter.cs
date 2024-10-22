@@ -8,6 +8,7 @@ namespace AbstractGeometry
 {
 	internal interface IHaveDiameter
 	{
+		double GetDiameter();
 		void DrawDiameter(System.Windows.Forms.PaintEventArgs e);
 	}
 }

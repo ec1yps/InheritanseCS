@@ -45,12 +45,15 @@ namespace AbstractGeometry
 		}
 		public void DrawDiameter(PaintEventArgs e)
 		{
-			e.Graphics.DrawLine(new Pen(Color, LineWidth), StartX, StartY + (float)Radius, StartX + (float)GetDiameter(), StartY + (float)Radius);
+			int dx = (int)(Radius * (1 - 1/Math.Sqrt(2)));
+			//e.Graphics.DrawLine(new Pen(Color, LineWidth), StartX, StartY + (float)Radius, StartX + (float)GetDiameter(), StartY + (float)Radius);
+			e.Graphics.DrawLine(new Pen(Color, LineWidth), StartX + dx, StartY + dx, StartX + (int)GetDiameter() - dx, StartY + (int)GetDiameter() - dx);
 		}
 		public override void Info(PaintEventArgs e)
 		{
             Console.WriteLine(this.GetType());
             Console.WriteLine($"Радиус круга: {Radius}");
+            Console.WriteLine($"Диаметр круга: {GetDiameter()}");
             base.Info(e);
 		}
 	}
