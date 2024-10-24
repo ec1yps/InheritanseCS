@@ -8,16 +8,16 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-	abstract class AbstrTriangle:Shape
+	abstract class AbstrTriangle : Shape
 	{
-		public abstract double GetHeight();
 		public AbstrTriangle(int startX, int startY, int lineWidth, Color color)
 			: base(startX, startY, lineWidth, color) { }
+		public abstract double GetHeight();
 		public override void Info(PaintEventArgs e)
 		{
 			Console.WriteLine(this.GetType());
-            Console.WriteLine($"Высота треугольника: {GetHeight()}");
+			Console.WriteLine($"Высота треугольника: {GetHeight()}");
 			base.Info(e);
-        }
+		}
 	}
 }

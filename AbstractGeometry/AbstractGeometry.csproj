@@ -54,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
+    <Compile Include="RightTriangle.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Squre.cs" />
     <Compile Include="Triangle.cs" />

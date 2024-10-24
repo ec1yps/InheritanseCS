@@ -37,8 +37,11 @@ namespace AbstractGeometry
 			IsoscalesTriangle i_triangle = new IsoscalesTriangle(50, 100, 600, 350, 3, System.Drawing.Color.Green);
 			i_triangle.Info(e);
 
-			EquilateralTriangle e_triangle = new EquilateralTriangle(150, 750, 350, 3, System.Drawing.Color.GreenYellow);
-			e_triangle.Info(e);
+			/*EquilateralTriangle e_triangle = new EquilateralTriangle(150, 750, 350, 3, System.Drawing.Color.GreenYellow);
+			e_triangle.Info(e);*/
+
+			RightTriangle r_triangle = new RightTriangle(50, 40, 30, 750, 350, 3, System.Drawing.Color.LimeGreen);
+			r_triangle.Draw(e);
 		}
 		[DllImport("kernel32.dll")]
 		public static extern IntPtr GetConsoleWindow();
